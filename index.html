@@ -24,7 +24,7 @@
         h1:first-child {
             margin-top: 0;
         }
-        
+
         /*
             -------------------------------------------------------------------
             Form styles
@@ -35,12 +35,12 @@
             padding: 1em 1.25em;
             border: solid 1px #ccc;
             border-radius: .25em;
-        } 
+        }
 
         label {
             vertical-align: middle;
         }
-        /* 
+        /*
             Note: Don't change font-family on password inputs,
             unless you want tiny •••• bullets :)
         */
@@ -51,18 +51,19 @@
 
         input[type='text'],
         input[type='password'],
-        input[type='submit'] {
+        input[type='submit'],
+        select {
             font-size: 1em;
             border-radius: .25em;
             -webkit-appearance: none;
         }
-
 
         input[type='text'],
         input[type='password'] {
             border: solid 1px #ddd;
             padding: .5em .5em;
             color: #555;
+            width: 16em;
         }
 
         input[type='submit'] {
@@ -98,15 +99,15 @@
             border-color: #333;
         }
 
-        
 
-        
+
+
         label + input[type=checkbox] {
             margin-left: 1em;
         }
 
         select {
-            border: solid 1px #aaa;
+            width: 17em;
         }
 
         fieldset {
@@ -117,7 +118,7 @@
         fieldset + fieldset {
             border-top: solid 1px #eee;
         }
-    
+
         .label {
             width: 10em;
             display: inline-block;
@@ -129,22 +130,18 @@
             -------------------------------------------------------------------
 
             An error class to forms that fail your validation:
-            
+
             <p class='error'>
                 <label for='field'></label>
                 <input id='field' type='text' value='foo'>
             </p>
         */
         .error > input,
-        .error > label,
-        input:required:invalid,
-        input:focus:invalid {
+        .error > label {
             color: red;
         }
 
-        .error > input,
-        input:required:invalid,
-        input:focus:invalid  {
+        .error > input {
             border-color: red;
         }
 
@@ -189,22 +186,22 @@
                 <span class="label">
                     Animal
                 </span>
-                
+
                 <input type='checkbox' name='animal' value='bear' id='bear'>
                 <label for='bear'>
                      Bear
                 </label>
-                
-                <input type='checkbox' name='animal' value='tiger' id='tiger'> 
+
+                <input type='checkbox' name='animal' value='tiger' id='tiger'>
                 <label for='tiger'>
                     Tiger
                 </label>
-                
+
                 <input type='checkbox' name='animal' value='snake' id='snake'>
                 <label for='snake'>
                      Snake
                 </label>
-                
+
                 <input type='checkbox' name='animal' value='donkey' id='donkey'>
                 <label for='donkey'>
                      Donkey
@@ -219,7 +216,7 @@
             </p>
         </fieldset>
         <fieldset>
-            <p>    
+            <p>
                 <input type='submit' value='Create account'>
             </p>
         </fieldset>
