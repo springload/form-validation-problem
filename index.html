@@ -1,35 +1,182 @@
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta charset="UTF-8"/>
     <title>Form validation problem</title>
+    <style>
+        /*
+            -------------------------------------------------------------------
+            Page prettiness
+            -------------------------------------------------------------------
+        */
+        body {
+            font-family: sans-serif;
+            line-height: 1.5;
+            color: #333;
+            background: #ddd;
+            margin: 2em;
+        }
+
+        h1, h3 {
+            color: #576774;
+        }
+
+        h1:first-child {
+            margin-top: 0;
+        }
+        
+        /*
+            -------------------------------------------------------------------
+            Form styles
+            -------------------------------------------------------------------
+        */
+        form {
+            background: #fff;
+            padding: 1em 1.25em;
+            border: solid 1px #ccc;
+            border-radius: .25em;
+        } 
+
+        label {
+            vertical-align: middle;
+        }
+        /* 
+            Note: Don't change font-family on password inputs,
+            unless you want tiny •••• bullets :)
+        */
+        input[type='text'],
+        input[type='submit'] {
+            font-family: sans-serif;
+        }
+
+        input[type='text'],
+        input[type='password'],
+        input[type='submit'] {
+            font-size: 1em;
+            border-radius: .25em;
+            -webkit-appearance: none;
+        }
+
+
+        input[type='text'],
+        input[type='password'] {
+            border: solid 1px #ddd;
+            padding: .5em .5em;
+            color: #555;
+        }
+
+        input[type='submit'] {
+            border: solid 1px transparent;
+            background: #0B77DB;
+            color: #fff;
+            font-size: .875em;
+            padding: .75em 1em;
+            cursor: pointer;
+        }
+
+        input[type='submit']:hover {
+            background: #3C9AA7;
+        }
+
+        input[type='submit']:focus {
+            background: #3D6EAC;
+        }
+
+
+
+
+        input[type='text']:focus,
+        input[type='password']:focus,
+        input[type='submit']:focus {
+            outline: none;
+            border-color: #0B77DB;
+            box-shadow: 0 0 6px rgba(48, 140, 255, 0.25);
+        }
+
+        input[type='submit']:active {
+            background: #333;
+            border-color: #333;
+        }
+
+        
+
+        
+        label + input[type=checkbox] {
+            margin-left: 1em;
+        }
+
+        select {
+            border: solid 1px #aaa;
+        }
+
+        fieldset {
+            border: none;
+            padding: 0;
+        }
+
+        fieldset + fieldset {
+            border-top: solid 1px #eee;
+        }
+    
+        .label {
+            width: 10em;
+            display: inline-block;
+        }
+
+        /*
+            -------------------------------------------------------------------
+            Error states
+            -------------------------------------------------------------------
+
+            An error class to forms that fail your validation:
+            
+            <p class='error'>
+                <label for='field'></label>
+                <input id='field' type='text' value='foo'>
+            </p>
+        */
+        .error > input,
+        .error > label,
+        input:required:invalid,
+        input:focus:invalid {
+            color: red;
+        }
+
+        .error > input,
+        input:required:invalid,
+        input:focus:invalid  {
+            border-color: red;
+        }
+
+    </style>
 </head>
 
 <body>
-<form method='post' action=''>
+    <form method='post' action=''>
+        <h1>Fill out this awesome form</h1>
+        <fieldset>
+            <h3>Your details</h3>
+            <p>
+                <label class='label' for='email'>
+                    Email
+                </label>
+                <input type='text' id='email' name='email'>
+            </p>
+            <p>
+                <label class='label' for='password'>
+                    Password
+                </label>
+                <input class='error' type='password' id='password' name='username'>
+            </p>
+        </fieldset>
 
-    <fieldset>
-        <p>
-            <label>
-                Email:<br>
-                <input type=text name=email>
-            </label>
-        </p>
-
-        <p>
-            <label>
-                Password:<br>
-                <input type=password name=username>
-            </label>
-        </p>
-    </fieldset>
-
-    <fieldset>
-        <p>
-            <label>
-                Colour:<br>
-                <select name=colour>
+        <fieldset>
+            <h3>Your animal</h3>
+            <p>
+                <label class='label' for='colour'>
+                    Colour
+                </label>
+                <select name='colour' id='colour'>
                     <option value=''>Choose colour</option>
                     <option value='blue'>Blue</option>
                     <option value='green'>Green</option>
@@ -37,37 +184,45 @@
                     <option value='black'>Black</option>
                     <option value='brown'>Brown</option>
                 </select>
-            </label>
-        </p>
-        <p>
-            Animal:<br>
-            <label>
-                <input type=checkbox name=animal value='bear'> Bear
-            </label>
+            </p>
+            <p>
+                <span class="label">
+                    Animal
+                </span>
+                
+                <input type='checkbox' name='animal' value='bear' id='bear'>
+                <label for='bear'>
+                     Bear
+                </label>
+                
+                <input type='checkbox' name='animal' value='tiger' id='tiger'> 
+                <label for='tiger'>
+                    Tiger
+                </label>
+                
+                <input type='checkbox' name='animal' value='snake' id='snake'>
+                <label for='snake'>
+                     Snake
+                </label>
+                
+                <input type='checkbox' name='animal' value='donkey' id='donkey'>
+                <label for='donkey'>
+                     Donkey
+                </label>
 
-            <label>
-                <input type=checkbox name=animal value='tiger'> Tiger
-            </label>
-
-            <label>
-                <input type=checkbox name=animal value='snake'> Snake
-            </label>
-
-            <label>
-                <input type=checkbox name=animal value='donkey'> Donkey
-            </label>
-        </p>
-
-        <p>
-            <label>Type of tiger:<br>
-                <input type=text name=tiger_type>
-            </label>
-        </p>
-
-    </fieldset>
-
-    <input type=submit value='Submit'>
-
-</form>
+            </p>
+            <p>
+                <label class='label' for='tiger_type'>
+                    Type of tiger
+                </label>
+                <input type='text' name='tiger_type' id='tiger_type'>
+            </p>
+        </fieldset>
+        <fieldset>
+            <p>    
+                <input type='submit' value='Create account'>
+            </p>
+        </fieldset>
+    </form>
 </body>
 </html>
