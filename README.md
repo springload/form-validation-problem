@@ -11,8 +11,7 @@ The form is considered valid if all the following conditions are met:
 * If `Tiger` is one of the chosen `Animal`s then `Type of tiger` is required to be a non-empty string.
 
 ## Other requirements
-If the form is submitted and an error occurs, the error element should have a CSS `error` class added to it.
-e.g.
+If the form is submitted and an error occurs, the error element's parent should have a CSS `error` class added to it.
 ```html
 <p class='error'>
     <label for='field'></label>
