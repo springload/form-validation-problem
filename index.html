@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Form validation problem</title>
+</head>
+
+<body>
+<form method='post' action=''>
+
+    <fieldset>
+        <p>
+            <label>
+                Email:<br>
+                <input type=text name=email>
+            </label>
+        </p>
+
+        <p>
+            <label>
+                Password:<br>
+                <input type=password name=username>
+            </label>
+        </p>
+    </fieldset>
+
+    <fieldset>
+        <p>
+            <label>
+                Colour:<br>
+                <select name=colour>
+                    <option value=''>Choose colour</option>
+                    <option value='blue'>Blue</option>
+                    <option value='green'>Green</option>
+                    <option value='red'>Red</option>
+                    <option value='black'>Black</option>
+                    <option value='brown'>Brown</option>
+                </select>
+            </label>
+        </p>
+        <p>
+            Animal:<br>
+            <label>
+                <input type=checkbox name=animal value='bear'> Bear
+            </label>
+
+            <label>
+                <input type=checkbox name=animal value='tiger'> Tiger
+            </label>
+
+            <label>
+                <input type=checkbox name=animal value='snake'> Snake
+            </label>
+
+            <label>
+                <input type=checkbox name=animal value='donkey'> Donkey
+            </label>
+        </p>
+
+        <p>
+            <label>Type of tiger:<br>
+                <input type=text name=tiger_type>
+            </label>
+        </p>
+
+    </fieldset>
+
+    <input type=submit value='Submit'>
+
+</form>
+</body>
+</html>
