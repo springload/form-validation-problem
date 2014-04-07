@@ -23,4 +23,4 @@ If the form is submitted and an error occurs, the error element's parent should 
 ```
 
 ## Submission
-Please email us a zip or tar.gz of your solution to tama@springload.co.nz &amp; josh@springload.co.nz.
+Please email us a zip or tar.gz of your solution to 1337h4x0r@springload.co.nz.
