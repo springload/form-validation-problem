@@ -2,7 +2,7 @@
 
 We've created this problem to evaluate how developers tackle a real-world problem. If you've been assigned this problem you should spend around **2 hours** working on it. The last thing we want you to do is toil away for days on end!
 
-If you've stumbled across this and want to work at [Springload](https://www.springload.co.nz/) feel free to submit it too. We might not have anything available but we're always on the lookout for skilled developers.
+If you've stumbled across this and want to work at [Springload](https://www.springload.co.nz/) feel free to submit it too. We're always on the lookout for skilled developers.
 
 ## Problem definition
 
@@ -19,12 +19,21 @@ Included in this repository is an [index.html](index.html) file that contains a 
 If the form is submitted and an error occurs, the error element's parent should have a CSS `error` class added to it.
 
 ```html
-<p class='error'>
-    <label for='field'></label>
-    <input id='field' type='text' value='foo'>
+<p class="error">
+    <label for="field"></label>
+    <input id="field" type="text" value="foo">
 </p>
 ```
 
+## The cherry on the cake
+
+Beyond the problem statement, show us the consideration you gave to some or all of the following:
+
+- Documentation
+- Accessibility
+- Testing
+- Tooling
+
 ## Submission
 
-Please email us a link to your fork of this repository, or a zip or tar.gz of your solution to 1337h4x0r@springload.co.nz.
+Please email us a link to your fork of this repository, or a zip of your solution to `1337h4x0r@springload.co.nz`.
