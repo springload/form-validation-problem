@@ -27,10 +27,12 @@ If the form is submitted and an error occurs, the error element's parent should 
 
 ## The cherry on the cake
 
-Beyond the problem statement, show us the consideration you gave to some or all of the following:
+Beyond the problem statement, show us the consideration you have given to some or all of the following:
 
 - Documentation
 - Accessibility
+- Progressive enhancement
+- Browser support
 - Testing
 - Tooling
 
