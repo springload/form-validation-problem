@@ -1,4 +1,4 @@
-# [Form validation problem](https://github.com/springload/form-validation-problem)
+# [Form validation problem](https://springload.github.io/form-validation-problem/)
 
 We've created this problem to evaluate how developers tackle a real-world problem. If you've been assigned this problem you should spend around **2 hours** working on it. The last thing we want you to do is toil away for days on end!
 
