@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
     <meta charset="UTF-8"/>
     <title>Form validation problem</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" media="all" href="style-ie.css"/>
+<![endif]-->
     <script src="submission.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.2.20171210/classList.min.js"></script>
 </head>
 
 <body>
     <form method='post' action='' name="form" onsubmit='return validationFunction()' >
         <h1>Fill Out This Awesome Form</h1>
         <fieldset>
+        <div>
             <h3>Your Details</h3>
             <p>
                
                 <input id="email" type='text' id='email' placeholder="Email*" name='email'>
+
                 <span class="prompt" id="emailid"></span>
             </p>
             <p>
@@ -23,6 +30,7 @@
                 <br>
                 <span class="prompt"  id="passwordid"></span>
             </p>
+        </div>
         </fieldset>
 
         <fieldset>
@@ -41,9 +49,6 @@
 
             </p>
             <p>
-                <label class="label" for="animal">
-                    Animal
-                </label>
                 
                 <input  type='checkbox' name='animal' value='bear' id='bear'>
                 <label class="checkbox" for='bear'>
@@ -76,9 +81,11 @@
         </fieldset>
         <fieldset>
             <p>
-                <input type='submit' value='CREATE ACCOUNT'>
+                <h3 id="submit"><input  type='submit' value='CREATE ACCOUNT'></h3></p>
             </p>
         </fieldset>
+        <button id="sizeUpButton" class="visible" onclick="increaseFontSize()"><h3 class="button-title" >WORDS TOO SMALL? CLICK HERE</h3></button>
+        <button id="sizeDownButton" class="invisible" onclick="decreaseFontSize()"><h3 class="button-title">CHANGE WORD SIZE BACK</h3></button>
     </form>
 </body>
 </html>

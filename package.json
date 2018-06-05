@@ -1,0 +1,14 @@
+{
+  "name": "form-validation-problem",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch --noStackTrace"
+  },
+  "repository": "https://github.com/anthony-gordon/form-validation-problem.git",
+  "author": "<you@example.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^23.1.0"
+  }
+}
