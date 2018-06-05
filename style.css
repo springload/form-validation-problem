@@ -1,0 +1,194 @@
+/*
+    -------------------------------------------------------------------
+    Page prettiness
+    -------------------------------------------------------------------
+*/
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    color: #576774;
+    background: #E3C0D3;
+    margin: 2em;
+    font-family: 'Roboto', Helvetica, sans-serif;
+}
+
+h1, h3 {
+    color: white;
+    font-style: normal;
+}
+
+h1:first-child {
+    margin-top: 0;
+}
+
+/*
+    -------------------------------------------------------------------
+    Form styles
+    -------------------------------------------------------------------
+*/
+form {
+    background: #122932;
+    padding: 1em 1.25em;
+    margin: auto;
+    border: solid 1px #ccc;
+    border-radius: .5em;
+    width: 500px;
+}
+
+label {
+    vertical-align: middle;
+    color: #576774;
+}
+/*
+    Note: Don't change font-family on password inputs,
+    unless you want tiny •••• bullets :)
+*/
+input[type='text'],
+input[type='submit'] {
+    font-family: sans-serif;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='submit'],
+select {
+    font-size: 1em;
+    border-radius: .25em;
+    -webkit-appearance: none;
+}
+
+input[type='text'],
+input[type='password'] {
+    border-radius: 2px;
+    border: solid 1px #E3C0D3;
+    padding: .5em .5em;
+    color: #576774;
+    background-color:#122932;
+    width: 96%;
+}
+
+input[type='submit'] {
+    border: solid 1px transparent;
+    background: #2C514C;
+    color: white;;
+    font-size: .875em;
+    padding: .75em 1em;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type='text']:focus,
+input[type='password']:focus,
+input[type='submit']:focus {
+    outline: none;
+    border-color: #2C514C;
+}
+
+input[type='submit']:active {
+    background: #E3C0D3;;
+    border-color: #E3C0D3;;
+}
+
+label + input[type=checkbox] {
+    margin-left: 1em;
+}
+
+select {
+    width: 17em;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+fieldset + fieldset {
+    border-top: solid 1px #eee;
+}
+
+.label {   
+    display: inline;
+}
+select {
+    background-color: #122932;
+    color:  #576774;
+    border-radius: 2px;
+    border: solid 1px #E3C0D3;
+    padding: .5em .5em;
+    width: 100%;
+}
+
+#submit {
+    font-weight: 800;
+}
+
+/*
+    -------------------------------------------------------------------
+    Font size-changing buttons
+    -------------------------------------------------------------------
+*/
+
+.invisible {
+    display: none;
+}
+
+.visible {
+    display: inline;
+}
+
+button {
+    border: solid 1px transparent;
+    background: #576066;
+    color: white;;
+    font-size: 1.0em;
+    font-style: initial;
+    padding: .75em 1em;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button-title {
+    margin: 5px 0;
+}
+/*
+    -------------------------------------------------------------------
+    Error states
+    -------------------------------------------------------------------
+*/
+.error > input,
+.error > label {
+    color: red;
+}
+
+.error > input,
+.error > label,
+.error > select {
+    border-color: red;
+}
+
+.error {
+    color: red;
+    border-color: red;
+}
+
+.prompt {
+    color: red;
+}
+/*
+    -------------------------------------------------------------------
+    Responsivenss
+    -------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 625px) {
+
+    form {
+        width: 90%;
+    }
+    input[type='password'], input[type='text'] {
+        width: 94%;
+    }
+    select {
+        width: 100%;
+    }
+}

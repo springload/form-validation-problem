@@ -1,0 +1,200 @@
+/*
+
+NOTE! This stylesheet is here just so a user on IE8 or earlier can have a similar user experience without the bugginess of features that aren't supported.
+    -------------------------------------------------------------------
+    Page prettiness
+    -------------------------------------------------------------------
+*/
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    color: #E3C0D3;
+    background: #E3C0D3;
+    margin: 2em;
+    font-family: calibri;
+}
+
+h1, h3 {
+    color: white;
+    font-style: normal;
+}
+
+h1:first-child {
+    margin-top: 0;
+}
+
+/*
+    -------------------------------------------------------------------
+    Form styles
+    -------------------------------------------------------------------
+*/
+form {
+    background: #122932;
+    padding: 1em 1.25em;
+    margin: auto;
+    border: solid 1px #ccc;
+    border-radius: .5em;
+    width: 60%;
+}
+
+label {
+    vertical-align: middle;
+    color: #576774;
+}
+/*
+    Note: Don't change font-family on password inputs,
+    unless you want tiny •••• bullets :)
+*/
+input[type='text'],
+input[type='submit'] {
+    font-family: sans-serif;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='submit'],
+select {
+    font-size: 1em;
+    border-radius: .25em;
+    -webkit-appearance: none;
+}
+
+input[type='text'],
+input[type='password'] {
+    border-radius: 2px;
+    border: solid 1px #E3C0D3;
+    padding: .5em .5em;
+    color: #E3C0D3;
+    background-color:#122932;
+    width: 96%;
+}
+
+input[type='submit'] {
+    border: solid 1px transparent;
+    background: #2C514C;
+    color: white;;
+    font-size: .875em;
+    padding: .75em 1em;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type='submit']:hover {
+    background: #2C514C;
+}
+
+input[type='submit']:focus {
+    background: #2C514C;
+}
+
+
+
+
+input[type='text']:focus,
+input[type='password']:focus,
+input[type='submit']:focus {
+    outline: none;
+    border-color: #2C514C;
+    box-shadow: 0 0 6px rgba(48, 140, 255, 0.25);
+}
+
+input[type='submit']:active {
+    background: #E3C0D3;;
+    border-color: #E3C0D3;;
+}
+
+label + input[type=checkbox] {
+    margin-left: 1em;
+}
+
+select {
+    width: 17em;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+fieldset + fieldset {
+    border-top: solid 1px #eee;
+}
+
+.label {
+    width: 10em;
+    display: inline-block;
+}
+
+select {
+    background-color: #122932;
+    color:  #576774;
+    border-radius: 2px;
+    border: solid 1px #E3C0D3;
+    padding: .5em .5em;
+    width: 100%;
+}
+
+.checkbox {
+    
+    color:  #E3C0D3;  
+}
+
+/*
+    -------------------------------------------------------------------
+    Error states
+    -------------------------------------------------------------------
+
+    An error class to forms that fail your validation:
+
+    <p class='error'>
+        <label for='field'></label>
+        <input id='field' type='text' value='foo'>
+    </p>
+*/
+.error > input,
+.error > label {
+    color: red;
+}
+
+.error > input,
+.error > label,
+.error > select {
+    border-color: red;
+}
+
+.error {
+    color: red;
+    border-color: red;
+}
+
+.prompt {
+    color: red;
+}
+
+/*
+-------------------------------------------------------------------
+Font size-changing buttons
+-------------------------------------------------------------------
+*/
+
+.invisible {
+    display: none;
+}
+
+.visible {
+    display: inline;
+}
+
+button {
+    border: solid 1px transparent;
+    background: #576066;
+    color: white;;
+    font-size: 1.5em;
+    padding: .75em 1em;
+    cursor: pointer;
+    width: 100%;
+}
+
+        /*
+   Note the lack of media queries, which are not supported in IE8 and earlier
+*/

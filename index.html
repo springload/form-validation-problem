@@ -1,225 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <meta charset="UTF-8" lang="en"/>
     <title>Form validation problem</title>
-    <style>
-        /*
-            -------------------------------------------------------------------
-            Page prettiness
-            -------------------------------------------------------------------
-        */
-        body {
-            font-family: sans-serif;
-            line-height: 1.5;
-            color: #333;
-            background: #ddd;
-            margin: 2em;
-        }
-
-        h1, h3 {
-            color: #576774;
-        }
-
-        h1:first-child {
-            margin-top: 0;
-        }
-
-        /*
-            -------------------------------------------------------------------
-            Form styles
-            -------------------------------------------------------------------
-        */
-        form {
-            background: #fff;
-            padding: 1em 1.25em;
-            border: solid 1px #ccc;
-            border-radius: .25em;
-        }
-
-        label {
-            vertical-align: middle;
-        }
-        /*
-            Note: Don't change font-family on password inputs,
-            unless you want tiny •••• bullets :)
-        */
-        input[type='text'],
-        input[type='submit'] {
-            font-family: sans-serif;
-        }
-
-        input[type='text'],
-        input[type='password'],
-        input[type='submit'],
-        select {
-            font-size: 1em;
-            border-radius: .25em;
-            -webkit-appearance: none;
-        }
-
-        input[type='text'],
-        input[type='password'] {
-            border: solid 1px #ddd;
-            padding: .5em .5em;
-            color: #555;
-            width: 16em;
-        }
-
-        input[type='submit'] {
-            border: solid 1px transparent;
-            background: #0B77DB;
-            color: #fff;
-            font-size: .875em;
-            padding: .75em 1em;
-            cursor: pointer;
-        }
-
-        input[type='submit']:hover {
-            background: #3C9AA7;
-        }
-
-        input[type='submit']:focus {
-            background: #3D6EAC;
-        }
-
-
-
-
-        input[type='text']:focus,
-        input[type='password']:focus,
-        input[type='submit']:focus {
-            outline: none;
-            border-color: #0B77DB;
-            box-shadow: 0 0 6px rgba(48, 140, 255, 0.25);
-        }
-
-        input[type='submit']:active {
-            background: #333;
-            border-color: #333;
-        }
-
-
-
-
-        label + input[type=checkbox] {
-            margin-left: 1em;
-        }
-
-        select {
-            width: 17em;
-        }
-
-        fieldset {
-            border: none;
-            padding: 0;
-        }
-
-        fieldset + fieldset {
-            border-top: solid 1px #eee;
-        }
-
-        .label {
-            width: 10em;
-            display: inline-block;
-        }
-
-        /*
-            -------------------------------------------------------------------
-            Error states
-            -------------------------------------------------------------------
-
-            An error class to forms that fail your validation:
-
-            <p class='error'>
-                <label for='field'></label>
-                <input id='field' type='text' value='foo'>
-            </p>
-        */
-        .error > input,
-        .error > label {
-            color: red;
-        }
-
-        .error > input {
-            border-color: red;
-        }
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" media="all" href="style-ie.css"/>
+    <![endif]-->
+    <script src="submission.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.2.20171210/classList.min.js"></script>
 </head>
 
 <body>
-    <form method='post' action=''>
-        <h1>Fill out this awesome form</h1>
+    <form method='post' action='' name="form" onsubmit='return validationFunction()' >
+        <h1>Fill Out This Awesome Form</h1>
         <fieldset>
-            <h3>Your details</h3>
-            <p>
-                <label class='label' for='email'>
-                    Email
-                </label>
-                <input type='text' id='email' name='email'>
-            </p>
-            <p>
-                <label class='label' for='password'>
-                    Password
-                </label>
-                <input class='error' type='password' id='password' name='username'>
-            </p>
+            <div>
+                <h3>Your Details</h3>
+                <p>
+                    <input id="email" type='text' placeholder="Email*" name='email'>
+                    <span class="prompt" id="emailid"></span>
+                </p>
+                <p>         
+                    <input placeholder="Password*" id="password" class='error' type='password' name='username'>
+                    <br>
+                    <span class="prompt"  id="passwordid"></span>
+                </p>
+            </div>
         </fieldset>
-
         <fieldset>
-            <h3>Your animal</h3>
+            <h3>Your Animal</h3>
             <p>
-                <label class='label' for='colour'>
-                    Colour
-                </label>
-                <select name='colour' id='colour'>
-                    <option value=''>Choose colour</option>
+                <select name='colour' id='colour' >
+                    <option value=''>Choose colour*</option>
                     <option value='blue'>Blue</option>
                     <option value='green'>Green</option>
                     <option value='red'>Red</option>
                     <option value='black'>Black</option>
                     <option value='brown'>Brown</option>
                 </select>
+                <br>
+                <span class="prompt" id="colourid"></span>
             </p>
-            <p>
-                <span class="label">
-                    Animal
-                </span>
-
-                <input type='checkbox' name='animal' value='bear' id='bear'>
-                <label for='bear'>
+            <p>         
+                <input  type='checkbox' name='animal' value='bear' id='bear'>
+                <label class="checkbox" for='bear'>
                      Bear
                 </label>
-
-                <input type='checkbox' name='animal' value='tiger' id='tiger'>
-                <label for='tiger'>
+                <input  type='checkbox' name='animal' value='tiger' id='tiger'>
+                <label class="checkbox"for='tiger'>
                     Tiger
                 </label>
-
-                <input type='checkbox' name='animal' value='snake' id='snake'>
-                <label for='snake'>
+                <input  type='checkbox' name='animal' value='snake' id='snake'>
+                <label class="checkbox" for='snake'>
                      Snake
                 </label>
-
-                <input type='checkbox' name='animal' value='donkey' id='donkey'>
-                <label for='donkey'>
+                <input  type='checkbox' name='animal' value='donkey' id='donkey'>
+                <label class="checkbox" for='donkey'>
                      Donkey
                 </label>
-
+                <br>
+                <span class="prompt" id="selectionid"></span>
             </p>
-            <p>
-                <label class='label' for='tiger_type'>
-                    Type of tiger
-                </label>
-                <input type='text' name='tiger_type' id='tiger_type'>
+            <p>  
+                <input placeholder="Type of tiger (if applicable)" type='text' name='tiger_type' id='tiger_type'>
+                <br>
+                <span class="prompt" id="tigerid"></span>
             </p>
         </fieldset>
         <fieldset>
             <p>
-                <input type='submit' value='Create account'>
+                <input  type='submit' value='CREATE ACCOUNT'>
             </p>
         </fieldset>
+        <button id="sizeUpButton" class="visible" onclick="increaseFontSize()">
+            <h3 class="button-title" >WORDS TOO SMALL? CLICK HERE</h3>
+        </button>
+        <button id="sizeDownButton" class="invisible" onclick="decreaseFontSize()">
+            <h3 class="button-title">CHANGE WORD SIZE BACK</h3>
+        </button>
     </form>
 </body>
 </html>
