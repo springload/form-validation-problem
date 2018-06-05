@@ -4,137 +4,81 @@
     <meta charset="UTF-8"/>
     <title>Form validation problem</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="submission.js"></script>
 </head>
 
 <body>
     <form method='post' action='' name="form" onsubmit='return validationFunction()' >
-        <h1>Fill out this awesome form</h1>
+        <h1>Fill Out This Awesome Form</h1>
         <fieldset>
-            <h3>Your details</h3>
+            <h3>Your Details</h3>
             <p>
-                <label class='label' for='email'>
-                    Email
-                </label>
-                <input id="email" type='text' id='email' name='email'>
-                <span id="emailid"></span>
+               
+                <input id="email" type='text' id='email' placeholder="Email*" name='email'>
+                <span class="prompt" id="emailid"></span>
             </p>
             <p>
-                <label class='label' for='password'>
-                    Password
-                </label>
-                <input id="password" class='error' type='password' id='password' name='username'>
-                <span id="passwordid"></span>
+                
+                <input placeholder="Password*" id="password" class='error' type='password' id='password' name='username'>
+                <br>
+                <span class="prompt"  id="passwordid"></span>
             </p>
         </fieldset>
 
         <fieldset>
-            <h3>Your animal</h3>
+            <h3>Your Animal</h3>
             <p>
-                <label class='label' for='colour'>
-                    Colour
-                </label>
-                <select name='colour' id='colour' required>
-                    <option value=''>Choose colour</option>
+                <select name='colour' id='colour' >
+                    <option value=''>Choose colour*</option>
                     <option value='blue'>Blue</option>
                     <option value='green'>Green</option>
                     <option value='red'>Red</option>
                     <option value='black'>Black</option>
                     <option value='brown'>Brown</option>
                 </select>
-                <span id="colourid"></span>
+                <br>
+                <span class="prompt" id="colourid"></span>
 
             </p>
             <p>
-                <span class="label">
+                <label class="label" for="animal">
                     Animal
-                </span>
-
-                <input type='checkbox' name='animal' value='bear' id='bear'>
-                <label for='bear'>
+                </label>
+                
+                <input  type='checkbox' name='animal' value='bear' id='bear'>
+                <label class="checkbox" for='bear'>
                      Bear
                 </label>
 
-                <input type='checkbox' name='animal' value='tiger' id='tiger'>
-                <label for='tiger'>
+                <input  type='checkbox' name='animal' value='tiger' id='tiger'>
+                <label class="checkbox"for='tiger'>
                     Tiger
                 </label>
 
-                <input type='checkbox' name='animal' value='snake' id='snake'>
-                <label for='snake'>
+                <input  type='checkbox' name='animal' value='snake' id='snake'>
+                <label class="checkbox" for='snake'>
                      Snake
                 </label>
 
-                <input type='checkbox' name='animal' value='donkey' id='donkey'>
-                <label for='donkey'>
+                <input  type='checkbox' name='animal' value='donkey' id='donkey'>
+                <label class="checkbox" for='donkey'>
                      Donkey
                 </label>
-                <span id="selectionid"></span>
+                <br>
+                <span class="prompt" id="selectionid"></span>
             </p>
             <p>
-                <label class='label' for='tiger_type'>
-                    Type of tiger
-                </label>
-                <input type='text' name='tiger_type' id='tiger_type'>
-                <span id="tigerid"></span>
+                
+                <input placeholder="Type of tiger (if applicable)" type='text' name='tiger_type' id='tiger_type'>
+                <br>
+                <span class="prompt" id="tigerid"></span>
             </p>
         </fieldset>
         <fieldset>
             <p>
-                <input type='submit' value='Create account'>
+                <input type='submit' value='CREATE ACCOUNT'>
             </p>
         </fieldset>
     </form>
-
-    <script type="text/javascript">
-        function validationFunction(){
-            var email = document.getElementById('email').value
-            var password = document.getElementById('password').value;
-            var bear = document.getElementById("bear")
-            var tiger = document.getElementById("tiger")
-            var snake = document.getElementById("snake")
-            var donkey = document.getElementById("donkey")
-            var tigerType = document.getElementById("tiger_type")
-            var regEx = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-
-            if(!regEx.test(email)){
-                document.getElementById("emailid").innerHTML = "please enter a valid email address";
-                return false;
-            }
-            else document.getElementById("emailid").innerHTML = "✓";
-            if(password.length < 8){
-                document.getElementById("passwordid").innerHTML = "please enter a password of at least 8 characters";
-                return false;
-            }
-            else document.getElementById("passwordid").innerHTML = "✓";
-            if(bear.checked == false && tiger.checked == false && snake.checked == false && donkey.checked ==false){
-                document.getElementById("selectionid").innerHTML = "please select at least two options";
-                return false
-            }
-            if(bear.checked == false && tiger.checked == false && snake.checked == false){
-                document.getElementById("selectionid").innerHTML = "you must choose two options";
-                return false
-            }
-            if(bear.checked == false && tiger.checked == false && donkey.checked == false){
-                document.getElementById("selectionid").innerHTML = "you must choose two options";
-                return false
-            }
-            if(bear.checked == false && donkey.checked == false && snake.checked == false){
-                document.getElementById("selectionid").innerHTML = "you must choose two options";
-                return false
-            }
-            if(donkey.checked == false && tiger.checked == false && snake.checked == false){
-                document.getElementById("selectionid").innerHTML = "you must choose two options";
-                return false
-            }
-            else document.getElementById("selectionid").innerHTML = "✓";
-
-            if(tiger.checked == true && tigerType.value.replace(/\s/g, '').length == 0){
-                document.getElementById("tigerid").innerHTML = "you must give your tiger a name";
-                return false
-            }
-            else document.getElementById("tigerid").innerHTML = "✓";
-           
-        }
-    </script>
 </body>
 </html>

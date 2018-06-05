@@ -6,13 +6,15 @@
         body {
             font-family: sans-serif;
             line-height: 1.5;
-            color: #333;
-            background: #ddd;
+            color: #E3C0D3;
+            background: #E3C0D3;
             margin: 2em;
+            font-family: calibri;
         }
 
         h1, h3 {
-            color: #576774;
+            color: white;
+            font-style: normal;
         }
 
         h1:first-child {
@@ -25,14 +27,17 @@
             -------------------------------------------------------------------
         */
         form {
-            background: #fff;
+            background: #122932;
             padding: 1em 1.25em;
+            margin: auto;
             border: solid 1px #ccc;
             border-radius: .25em;
+            width: 500px;
         }
 
         label {
             vertical-align: middle;
+            color: #576774;
         }
         /*
             Note: Don't change font-family on password inputs,
@@ -54,27 +59,30 @@
 
         input[type='text'],
         input[type='password'] {
-            border: solid 1px #ddd;
+            border-radius: 2px;
+            border: solid 1px #E3C0D3;
             padding: .5em .5em;
-            color: #555;
-            width: 16em;
+            color: #E3C0D3;
+            background-color:#122932;
+            width: 96%;
         }
 
         input[type='submit'] {
             border: solid 1px transparent;
-            background: #0B77DB;
-            color: #fff;
+            background: #2C514C;
+            color: white;;
             font-size: .875em;
             padding: .75em 1em;
             cursor: pointer;
+            width: 100%;
         }
 
         input[type='submit']:hover {
-            background: #3C9AA7;
+            background: #2C514C;
         }
 
         input[type='submit']:focus {
-            background: #3D6EAC;
+            background: #2C514C;
         }
 
 
@@ -84,13 +92,13 @@
         input[type='password']:focus,
         input[type='submit']:focus {
             outline: none;
-            border-color: #0B77DB;
+            border-color: #2C514C;
             box-shadow: 0 0 6px rgba(48, 140, 255, 0.25);
         }
 
         input[type='submit']:active {
-            background: #333;
-            border-color: #333;
+            background: #E3C0D3;;
+            border-color: #E3C0D3;;
         }
 
 
@@ -137,4 +145,31 @@
 
         .error > input {
             border-color: red;
+        }
+
+        .green > input,
+        .green > label {
+            color: green;
+        }
+
+        .green > input {
+            border-color: green;
+        }
+
+        #colour {
+            background-color: #122932;
+            color:  #576774;
+            border-radius: 2px;
+            border: solid 1px #E3C0D3;
+            padding: .5em .5em;
+            width: 100%;
+        }
+
+        .checkbox {
+            
+            color:  #E3C0D3;  
+        }
+
+        .prompt {
+            color: #E3C0D3;
         }
