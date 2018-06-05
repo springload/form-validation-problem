@@ -1,10 +1,13 @@
-// const path = require('path')
+const path = require('path')
 
 module.exports = {
   entry: './index.js',
-  output: 'bundle.js',
+  output: {
+    path: path.join(__dirname, '/public'),
+    filename: 'bundle.js'
+  },
   module: {
-    loaders: [{
+    rules: [{
       test: /\.jsx?$/,
       loader: 'babel-loader',
       exclude: /node_modules/
@@ -14,6 +17,8 @@ module.exports = {
     extensions: ['.js', '.jsx']
   },
   devServer: {
+    publicPath: '/',
+    contentBase: './public',
     compress: true,
     hot: true
   },

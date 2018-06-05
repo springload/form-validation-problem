@@ -5,8 +5,11 @@
   "repository": "https://github.com/l-suzuki/form-validation-problem.git",
   "main": "index.js",
   "scripts": {
+    "postinstall": "webpack",
+    "dev": "nodemon --watch server & webpack --watch",
     "start": "webpack-dev-server --hot",
-    "test": "jest"
+    "test": "jest",
+    "watch": "nodemon -e js,jsx -x npm test"
   },
   "jest": {
     "collectCoverage": true
