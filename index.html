@@ -94,19 +94,18 @@
             var snake = document.getElementById("snake")
             var donkey = document.getElementById("donkey")
             var tigerType = document.getElementById("tiger_type")
-
             var regEx = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
             if(!regEx.test(email)){
                 document.getElementById("emailid").innerHTML = "please enter a valid email address";
                 return false;
             }
-            else document.getElementById("emailid").innerHTML = "";
+            else document.getElementById("emailid").innerHTML = "✓";
             if(password.length < 8){
                 document.getElementById("passwordid").innerHTML = "please enter a password of at least 8 characters";
                 return false;
             }
-            else document.getElementById("passwordid").innerHTML = "";
+            else document.getElementById("passwordid").innerHTML = "✓";
             if(bear.checked == false && tiger.checked == false && snake.checked == false && donkey.checked ==false){
                 document.getElementById("selectionid").innerHTML = "please select at least two options";
                 return false
@@ -127,10 +126,14 @@
                 document.getElementById("selectionid").innerHTML = "you must choose two options";
                 return false
             }
-            if(tiger.checked == true && !tigerType.value.replace(/\s/g, '').length){
+            else document.getElementById("selectionid").innerHTML = "✓";
+
+            if(tiger.checked == true && tigerType.value.replace(/\s/g, '').length == 0){
                 document.getElementById("tigerid").innerHTML = "you must give your tiger a name";
                 return false
             }
+            else document.getElementById("tigerid").innerHTML = "✓";
+           
         }
     </script>
 </body>
