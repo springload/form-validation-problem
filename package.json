@@ -9,6 +9,8 @@
   "author": "<you@example.com>",
   "license": "MIT",
   "dependencies": {
-    "jest": "^23.1.0"
+    "global": "^4.3.2",
+    "jest": "^23.1.0",
+    "make-gitignore": "^1.1.1"
   }
 }
