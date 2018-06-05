@@ -1,11 +1,8 @@
-const path = require('path')
+// const path = require('path')
 
 module.exports = {
   entry: './index.js',
-  output: {
-    path: path.join(__dirname, './public'),
-    filename: 'bundle.js'
-  },
+  output: 'bundle.js',
   module: {
     loaders: [{
       test: /\.jsx?$/,
@@ -15,6 +12,10 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx']
+  },
+  devServer: {
+    compress: true,
+    hot: true
   },
   devtool: 'source-map'
 }
