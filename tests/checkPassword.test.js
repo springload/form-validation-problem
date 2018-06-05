@@ -1,4 +1,4 @@
-var submission = require('../submission.js')
+var submission = require('./testfunctions.js')
 
 test("checkPassword returns false for a password that is less than 8 characters", function () {
   var expected = false

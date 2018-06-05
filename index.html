@@ -2,12 +2,13 @@
 <html>
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=9">
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" lang="en"/>
     <title>Form validation problem</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <!--[if lt IE 9]>
-<link rel="stylesheet" type="text/css" media="all" href="style-ie.css"/>
-<![endif]-->
+    <link rel="stylesheet" type="text/css" media="all" href="style-ie.css"/>
+    <![endif]-->
     <script src="submission.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.2.20171210/classList.min.js"></script>
 </head>
@@ -16,23 +17,19 @@
     <form method='post' action='' name="form" onsubmit='return validationFunction()' >
         <h1>Fill Out This Awesome Form</h1>
         <fieldset>
-        <div>
-            <h3>Your Details</h3>
-            <p>
-               
-                <input id="email" type='text' id='email' placeholder="Email*" name='email'>
-
-                <span class="prompt" id="emailid"></span>
-            </p>
-            <p>
-                
-                <input placeholder="Password*" id="password" class='error' type='password' id='password' name='username'>
-                <br>
-                <span class="prompt"  id="passwordid"></span>
-            </p>
-        </div>
+            <div>
+                <h3>Your Details</h3>
+                <p>
+                    <input id="email" type='text' placeholder="Email*" name='email'>
+                    <span class="prompt" id="emailid"></span>
+                </p>
+                <p>         
+                    <input placeholder="Password*" id="password" class='error' type='password' name='username'>
+                    <br>
+                    <span class="prompt"  id="passwordid"></span>
+                </p>
+            </div>
         </fieldset>
-
         <fieldset>
             <h3>Your Animal</h3>
             <p>
@@ -52,17 +49,14 @@
                 <label class="checkbox" for='bear'>
                      Bear
                 </label>
-
                 <input  type='checkbox' name='animal' value='tiger' id='tiger'>
                 <label class="checkbox"for='tiger'>
                     Tiger
                 </label>
-
                 <input  type='checkbox' name='animal' value='snake' id='snake'>
                 <label class="checkbox" for='snake'>
                      Snake
                 </label>
-
                 <input  type='checkbox' name='animal' value='donkey' id='donkey'>
                 <label class="checkbox" for='donkey'>
                      Donkey
@@ -70,8 +64,7 @@
                 <br>
                 <span class="prompt" id="selectionid"></span>
             </p>
-            <p>
-                
+            <p>  
                 <input placeholder="Type of tiger (if applicable)" type='text' name='tiger_type' id='tiger_type'>
                 <br>
                 <span class="prompt" id="tigerid"></span>
@@ -79,11 +72,15 @@
         </fieldset>
         <fieldset>
             <p>
-                <h3 id="submit"><input  type='submit' value='CREATE ACCOUNT'></h3></p>
+                <input  type='submit' value='CREATE ACCOUNT'>
             </p>
         </fieldset>
-        <button id="sizeUpButton" class="visible" onclick="increaseFontSize()"><h3 class="button-title" >WORDS TOO SMALL? CLICK HERE</h3></button>
-        <button id="sizeDownButton" class="invisible" onclick="decreaseFontSize()"><h3 class="button-title">CHANGE WORD SIZE BACK</h3></button>
+        <button id="sizeUpButton" class="visible" onclick="increaseFontSize()">
+            <h3 class="button-title" >WORDS TOO SMALL? CLICK HERE</h3>
+        </button>
+        <button id="sizeDownButton" class="invisible" onclick="decreaseFontSize()">
+            <h3 class="button-title">CHANGE WORD SIZE BACK</h3>
+        </button>
     </form>
 </body>
 </html>

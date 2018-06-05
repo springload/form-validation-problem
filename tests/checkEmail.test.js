@@ -1,4 +1,4 @@
-var submission = require('../submission.js')
+var submission = require('./testfunctions.js')
 
 test("checkEmail returns false for an email that ends in an @", function () {
   var expected = false

@@ -1,4 +1,4 @@
-var submission = require('../submission.js')
+var submission = require('./testfunctions.js')
 
 test("checkColour returns false when no colour has been selected", function () {
   var expected = false
