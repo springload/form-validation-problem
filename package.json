@@ -24,7 +24,7 @@
   "author": "Laura",
   "license": "ISC",
   "devDependencies": {
-    "enzyme": "^2.8.2",
+    "enzyme": "^3.3.0",
     "jest": "^21.2.1",
     "nodemon": "^1.11.0",
     "enzyme-adapter-react-15": "^1.0.5",

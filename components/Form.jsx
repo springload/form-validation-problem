@@ -37,7 +37,6 @@ class Form extends React.Component {
   validate = (e) => {
     e.preventDefault()
     const {email, errors, password, colour, animals, tiger_type} = this.state
-    console.log('Validation happened!')
 
     if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) errors.push('email')
 
@@ -74,7 +73,7 @@ class Form extends React.Component {
   }
 
   render(){
-    const {email, password, colour, animals, tigerType} = this.state
+    const {email, password, colour, animals, tigerType, errors} = this.state
     return (
       <div>
         <form method='post' action='' onSubmit={this.validate}>
@@ -143,7 +142,9 @@ class Form extends React.Component {
                     <input type='text' name='tiger_type' id='tiger_type' onChange={this.handleUserInput}></input>
                 </p>
             </fieldset>
-            {this.state.errors.length > 0 && <span>{this.state.errors.map(error => <p className='error'>{this.displayErrorMessage(error)}</p>)}</span>}
+            <p>
+              {errors.length > 0 && <span id='errorDisplay'>{errors.map((error, i) => <p key={i} className='error'>{this.displayErrorMessage(error)}</p>)}</span>}
+            </p>
             <fieldset>
                 <p>
                     <input type='submit' value='Create account'></input>
