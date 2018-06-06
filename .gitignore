@@ -1,1 +1,7 @@
-.idea
+node_modules
+static
+npm-debug.log
+bundle.js
+bundle.js.map
+coverage/
+yarn-error.log
