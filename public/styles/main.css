@@ -130,6 +130,9 @@ fieldset + fieldset {
         <input id='field' type='text' value='foo'>
     </p>
 */
+.error {
+  color: red;
+}
 .error > input,
 .error > label {
     color: red;
