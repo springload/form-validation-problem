@@ -140,7 +140,7 @@ class Form extends React.Component {
                     <label className='label' htmlFor='tiger_type'>
                         Type of tiger
                     </label>
-                    <input type='text' name='tiger_type' id='tiger_type' onClick={this.handleUserInput}></input>
+                    <input type='text' name='tiger_type' id='tiger_type' onChange={this.handleUserInput}></input>
                 </p>
             </fieldset>
             {this.state.errors.length > 0 && <span>{this.state.errors.map(error => <p className='error'>{this.displayErrorMessage(error)}</p>)}</span>}
