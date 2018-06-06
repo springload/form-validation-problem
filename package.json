@@ -1,0 +1,51 @@
+{
+  "name": "form-validation-problem",
+  "version": "0.1.0",
+  "description": "Technical test for Springload",
+  "repository": "https://github.com/l-suzuki/form-validation-problem.git",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "webpack",
+    "dev": "nodemon --watch server & webpack --watch",
+    "start": "webpack-dev-server --hot",
+    "test": "jest",
+    "watch": "nodemon -e js,jsx -x npm test"
+  },
+  "jest": {
+    "collectCoverage": true
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react",
+      "stage-0"
+    ]
+  },
+  "author": "Laura",
+  "license": "ISC",
+  "devDependencies": {
+    "enzyme": "^3.3.0",
+    "jest": "^21.2.1",
+    "nodemon": "^1.11.0",
+    "enzyme-adapter-react-15": "^1.0.5",
+    "standard": "^11.0.1"
+  },
+  "dependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "jest-cli": "^22.4.4",
+    "jsdom": "^11.0.0",
+    "jsx-loader": "^0.13.2",
+    "npm": "^6.0.1",
+    "react": "^15.6.2",
+    "react-dom": "^15.5.4",
+    "react-router-dom": "^4.1.1",
+    "react-test-renderer": "^15.5.4",
+    "webpack": "^2.3.3",
+    "webpack-dev-server": "^2.4.2"
+  }
+}
