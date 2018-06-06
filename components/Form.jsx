@@ -4,33 +4,70 @@ class Form extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      email: 'laur',
+      email: '',
       password: '',
-      colourSelected: false,
+      colour: '',
       animals: [],
       tigerType: '',
-      emailValid: true
+      errors: [],
+      valid: false
+
+    }
+    this.handleUserInput = this.handleUserInput.bind(this)
+    this.addErrorClass = this.addErrorClass.bind(this)
+    this.validate = this.validate.bind(this)
+  }
+
+  handleUserInput = (e) => {
+    const name = e.target.name
+    const value = e.target.value
+    this.setState({[name]: value})
+  }
+
+  validate = (e) => {
+    e.preventDefault()
+    const {email, errors} = this.state
+    console.log('Validation happened!')
+    if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) errors.push('email')
+
+    
+    this.setState({
+      valid: errors.length == 0,
+      errors
+    })
+  }
+
+  addErrorClass = (error) => {
+    return this.state.errors.includes(error)
+      ? 'error'
+      : ''
+  }
+
+  displayErrorMessage = (error) => {
+    switch(error) {
+      case 'email': return 'Please enter a valid email address.'
+      default: return
     }
   }
 
   render(){
     return (
       <div>
-        <form method='post' action=''>
+        <form method='post' action='' onSubmit={this.validate}>
             <h1>Fill out this awesome form</h1>
             <fieldset>
                 <h3>Your details</h3>
-                <p className={this.state.email.length > 0 ? this.state.emailValid != true && 'error' : ''}>
+                <p className={this.addErrorClass('email')}>
                     <label className='label' htmlFor='email'>
                         Email
                     </label>
-                    <input type='text' id='email' name='email'></input>
+                    <input type='text' id='email' name='email' value={this.state.email} onChange={this.handleUserInput}></input>
                 </p>
                 <p>
                     <label className='label' htmlFor='password'>
                         Password
                     </label>
-                    <input type='password' id='password' name='username'></input>
+                    <input type='password' id='password' name='password'></input>
                 </p>
             </fieldset>
 
@@ -82,6 +119,7 @@ class Form extends React.Component {
                     <input type='text' name='tiger_type' id='tiger_type'></input>
                 </p>
             </fieldset>
+            {this.state.errors.length > 0 && <span>{this.state.errors.map(error => <p className='error'>{this.displayErrorMessage(error)}</p>)}</span>}
             <fieldset>
                 <p>
                     <input type='submit' value='Create account'></input>
@@ -94,4 +132,5 @@ class Form extends React.Component {
 
 }
 
+// className={this.state.email.length > 0 ? this.state.emailValid != true && 'error': ''}
 export default Form
