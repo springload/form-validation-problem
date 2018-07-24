@@ -1,0 +1,40 @@
+{
+  "name": "react-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/annika-philipp/react-boilerplate.git",
+  "author": "Annika <liebste.anni@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node server & webpack --watch",
+    "test": "jest --watchAll --noStackTrace"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ]
+  },
+  "jest": {
+    "collectCoverage": true
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "express": "^4.16.3",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-test-renderer": "^15.5.4",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.4.2"
+  },
+  "devDependencies": {
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest": "^22.4.3",
+    "nodemon": "^1.11.0"
+  }
+}
