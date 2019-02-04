@@ -25,6 +25,8 @@ If the form is submitted and an error occurs, the error element's parent should 
 </p>
 ```
 
+Please write a little bit about the technology you chose and why, including any limitations or possibilities of this approach.
+
 ## The cherry on the cake
 
 Beyond the problem statement, show us the consideration you have given to some or all of the following:
