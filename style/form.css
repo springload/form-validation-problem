@@ -3,6 +3,7 @@
   Form styles
   -------------------------------------------------------------------
 */
+
 form {
   background: #fff;
   padding: 1em 1.25em;
@@ -13,10 +14,12 @@ form {
 label {
   vertical-align: middle;
 }
+
 /*
-    Note: Don't change font-family on password inputs,
-    unless you want tiny •••• bullets :)
+  Note: Don't change font-family on password inputs,
+  unless you want tiny •••• bullets :)
 */
+
 input[type='text'],
 input[type='submit'] {
   font-family: sans-serif;
@@ -36,7 +39,9 @@ input[type='password'] {
   border: solid 1px #ddd;
   padding: 0.5em 0.5em;
   color: #555;
-  width: 16em;
+  width: 70%;
+  min-width: 12em;
+  max-width: 16em;
 }
 
 input[type='submit'] {
@@ -74,7 +79,9 @@ label + input[type='checkbox'] {
 }
 
 select {
-  width: 17em;
+  width: 70%;
+  min-width: 12em;
+  max-width: 16em;
 }
 
 fieldset {
@@ -96,6 +103,14 @@ fieldset + fieldset {
   font-size: small;
   color: red;
   margin-left: 12.6em;
+}
+@media only screen and (max-width: 575px) {
+  .label {
+    display: block;
+  }
+  .helper-text {
+    margin-left: 0;
+  }
 }
 
 .helper-text::before {
