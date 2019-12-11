@@ -31,6 +31,21 @@ function validateColorSelect() {
   return false;
 }
 
+// Checks to see if 2 or more animals were picked
+function wereAnimalsPicked() {
+  let chosenAnimals = 0;
+  animals.forEach(animal => animal.checked && chosenAnimals++);
+  if (chosenAnimals >= 2) return true;
+  return false;
+}
+
+// If less than 2 animals were picked field is invalid
+function validateAnimal() {
+  if (wereAnimalsPicked()) return isValid(animalParent)
+  isInvalid(animalParent, 'Choose at least 2 animals');
+  return false;
+}
+
 // Adds error styling to parent class and red helper text under field
 function isInvalid(parentElement, text) {
   parentElement.className = 'error';
