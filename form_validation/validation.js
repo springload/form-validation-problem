@@ -24,6 +24,13 @@ function validatePassword() {
   return false;
 }
 
+// Checks that a color has been selected
+function validateColorSelect() {
+  if (color.value !== '') return isValid(color.parentElement);
+  isInvalid(color.parentElement, 'Please select a color');
+  return false;
+}
+
 // Adds error styling to parent class and red helper text under field
 function isInvalid(parentElement, text) {
   parentElement.className = 'error';
