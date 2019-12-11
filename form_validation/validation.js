@@ -71,3 +71,8 @@ function isValid(parentElement) {
   }
   return true;
 }
+
+function validateForm() {
+  if (validateEmail() && validatePassword() && validateColorSelect() && validateAnimal() && validateTigerPick()) return true;
+  return false;
+}
