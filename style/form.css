@@ -90,3 +90,15 @@ fieldset + fieldset {
   width: 10em;
   display: inline-block;
 }
+
+.helper-text {
+  margin-top: -4px;
+  font-size: small;
+  color: red;
+  margin-left: 12.6em;
+}
+
+.helper-text::before {
+  content: '*';
+  font-size: large;
+}

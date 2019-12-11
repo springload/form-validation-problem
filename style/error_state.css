@@ -12,7 +12,8 @@
 */
 
 .error > input,
-.error > label {
+.error > label,
+.error > span {
   color: red;
 }
 
