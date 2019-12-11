@@ -1,0 +1,22 @@
+/*
+  -------------------------------------------------------------------
+  Page prettiness
+  -------------------------------------------------------------------
+*/
+
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background: #ddd;
+  margin: 2em;
+}
+
+h1,
+h3 {
+  color: #576774;
+}
+
+h1:first-child {
+  margin-top: 0;
+}

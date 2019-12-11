@@ -1,0 +1,21 @@
+/*
+  -------------------------------------------------------------------
+  Error states
+  -------------------------------------------------------------------
+
+  An error class to forms that fail your validation:
+
+  <p class='error'>
+    <label for='field'></label>
+    <input id='field' type='text' value='foo'>
+  </p>
+*/
+
+.error > input,
+.error > label {
+  color: red;
+}
+
+.error > input {
+  border-color: red;
+}
