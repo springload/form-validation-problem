@@ -17,6 +17,13 @@ function validateEmail() {
   return false;
 }
 
+// Makes sure the password is longer than 8 characters
+function validatePassword() {
+  if (password.value.length > 8) return isValid(password.parentElement);
+  isInvalid(password.parentElement, 'Password must be longer than 8 characters');
+  return false;
+}
+
 // Adds error styling to parent class and red helper text under field
 function isInvalid(parentElement, text) {
   parentElement.className = 'error';
