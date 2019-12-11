@@ -46,6 +46,13 @@ function validateAnimal() {
   return false;
 }
 
+// Checks that type of tiger is not empty if tiger was picked
+function validateTigerPick() {
+  if (!tiger.checked || tiger.checked && typeOfTiger.value !== '') return isValid(typeOfTiger.parentElement);
+  isInvalid(typeOfTiger.parentElement, 'Type of tiger is required if animal tiger is chosen');
+  return false;
+}
+
 // Adds error styling to parent class and red helper text under field
 function isInvalid(parentElement, text) {
   parentElement.className = 'error';
