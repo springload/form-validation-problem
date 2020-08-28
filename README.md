@@ -38,6 +38,3 @@ Beyond the problem statement, show us the consideration you have given to some o
 - Testing
 - Tooling
 
-## Submission
-
-Please email us a link to your fork of this repository, or a zip of your solution to `1337h4x0r@springload.co.nz`.
