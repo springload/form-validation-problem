@@ -18,9 +18,11 @@ The form has these fields:
 * `Animals` is multichoice, where multiple options can be selected, and the options are `Bear`, `Tiger`, `Snake`, and `Donkey`.
 * If `Tiger` is selected then a textbox `Type of tiger` is revealed and this is a required field.
 
-## Other advice
+Feel free to decide any styling, responsive behaviour, or any text for error messages or labels or placeholders etc, yourself.
 
-Please write a little bit about the technology you chose and why, including any limitations or possibilities of this approach.
+Your objective is to produce this form with as much or as little sophistication as you see fit, explaining what informed your decisions.
+
+## Other advice
 
 2 hours isn't much, so it's ok to not do everything! We want to see what you've prioritised, and perhaps a description of what hasn't been done.
 
