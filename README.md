@@ -24,7 +24,9 @@ Your objective is to produce this form with as much or as little sophistication 
 
 ## Other advice
 
-2 hours isn't much, so it's ok to not do everything! We want to see what you've prioritised, and perhaps a description of what hasn't been done.
+2 hours isn't much, so it's ok to not do everything!
+
+We want to see what you've prioritised, and a description of what hasn't been done.
 
 You might want to consider:
 
