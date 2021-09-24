@@ -13,11 +13,10 @@ The API is in REST or GraphQL.
 The API exposes a database which has information on Animals, and has the follow attributes:
 
 * Anyone can access a list of Animals
-* Only authenicated users can add Animals
-* The schema is defined as
-  * Animal 
+* Only authenticated users can add Animals
+* An Animal should have:
     * Name (`string`),
-    * Type (`Bear`, `Tiger`, `Snake`, and `Donkey`),
+    * Type (`Bear`, `Tiger`, `Snake`, or `Donkey`),
     * Tiger Type (`string`)
 * If the Animal Type is `Tiger` then a Tiger Type is also required.
 
