@@ -10,9 +10,14 @@ Imagine, if you will, an API
 
 The API is in REST or GraphQL.
 
-The API exposes a database which has information on Animals two things 
+The API exposes a database which has information on Animals, and has the follow attributes:
 
-* A list of: Animal Name (`string`), Animal Type (`Bear`, `Tiger`, `Snake`, and `Donkey`).
+* Anyone can access a list of Animals
+* Only authenticated users can add Animals
+* An Animal should have:
+    * Name (`string`),
+    * Type (`Bear`, `Tiger`, `Snake`, or `Donkey`),
+    * Tiger Type (`string`)
 * If the Animal Type is `Tiger` then a Tiger Type is also required.
 
 You can model this data however you'd like. E.g. SQLite, Postgres, MSSQL, flat file etc.
@@ -30,6 +35,7 @@ We want to see what you've prioritised, and a description of what hasn't been do
 You might want to consider:
 
 - API security
+- Error reporting
 - Normalisation
 - Testing
 - Documentation
