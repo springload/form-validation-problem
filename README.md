@@ -1,6 +1,6 @@
 # Form validation problem
 
-We've created this problem to evaluate how developers tackle a real-world problem. If you've been assigned this problem, you should spend around **3 hours** working on it. The last thing we want you to do is toil away for days on end!
+We've created this exercise to evaluate how developers tackle a real-world problem. If you've been assigned this problem, you should spend around **3 hours** working on it. The last thing we want you to do is toil away for days on end!
 
 If you've stumbled across this and want to work at [Springload](https://www.springload.co.nz/) feel free to submit it too. We're always on the lookout for skilled developers.
 
